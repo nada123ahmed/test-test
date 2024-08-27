@@ -1,0 +1,57 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-white-light: #F6F8FF;
+  --color-white-lighter: #FEFEFE;
+  --color-blue: #0079FF;
+  --color-blue-light: #60ABFF;
+  --color-black: #141D2F;
+  --color-black-light: #2B3442;
+  --color-black-lighter: #1E2A47;
+  --color-grey: #4B6A9B;
+  --color-red: #F74646;
+  --body-background: var(--color-white-light);
+  --card-background: var(--color-white-lighter);
+  --text-primary: var(--color-black-light);
+  --text-secondary: var(--color-grey);
+  --stats-bg: rgb(246, 248, 255); /* Light mode stats background */
+}
+
+:root[data-theme="dark"] {
+  --body-background: var(--color-black);
+  --card-background: var(--color-black-lighter);
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-white);
+  --stats-bg: rgb(17, 22, 38); /* Dark mode stats background */
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+.dark {
+  background-color: rgb(17, 22, 38);
+  color: white;
+}
+
+.light {
+  background-color: #f6f8ff;
+  color: black;
+}
+
+/* Additional styling for components goes here */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--stats-bg);
+
+  color: #333;
+  
+}
+html{
+  background-color: var(--stats-bg);
+  height:100%;
+  width: 100%;
+}
+

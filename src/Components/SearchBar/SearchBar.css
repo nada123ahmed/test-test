@@ -1,0 +1,120 @@
+/* :root variables for light and dark modes */
+:root {
+  --color-white: #FFFFFF;
+  --color-white-light: #F6F8FF;
+  --color-white-lighter: #FEFEFE;
+  --color-blue: #0079FF;
+  --color-blue-light: #60ABFF;
+  --color-black: #141D2F;
+  --color-black-light: #2B3442;
+  --color-black-lighter: #1E2A47;
+  --color-grey: #4B6A9B;
+  --color-red: #F74646;
+  --body-background: var(--color-white-light);
+  --card-background: var(--color-white-lighter);
+  --text-primary: var(--color-black-light);
+  --text-secondary: var(--color-grey);
+  --search-bar-bg: #E0E0E0; /* Light mode stats background */
+}
+
+:root[data-theme="dark"] {
+  --body-background: var(--color-black);
+  --card-background: var(--color-black-lighter); /* Dark mode card background color */
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-white);
+  --search-bar-bg: rgb(17, 22, 38); /* Dark mode stats background */
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Center the search bar */
+  padding: 1rem;
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  /* background-color: var(--search-bar-bg); */
+  transition: background-color 0.3s ease;
+  background-color: var(--card-background);
+}
+
+/* Container for input and icon */
+.input-container {
+  position: relative; /* Position relative for absolute positioning of the icon */
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Search icon styles */
+.search-icon {
+  position: absolute;
+  left: 0.75rem; /* Space from the left edge of the input */
+  width: 1.5rem; /* Size of the icon */
+  height: 1.5rem; /* Size of the icon */
+  color: var(--input-text); /* Use CSS variable for icon color */
+}
+
+/* Input styles */
+.search-bar input {
+  flex: 1; /* Input takes up remaining space */
+  padding: 0.5rem 1rem;
+  padding-left: 2.5rem; /* Add space for the icon */
+  font-size: 1rem;
+  border: 1px solid var(--input-border); /* Use CSS variable for border color */
+  border-radius: 0.5rem; /* Rounded corners */
+  outline: none;
+  background-color: var(--input-background); /* Use CSS variable for background color */
+  color: var(--input-text); /* Use CSS variable for text color */
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus styles */
+.search-bar input:focus {
+  border-color: var(--input-border-focus); /* Use CSS variable for focus border color */
+}
+
+/* Button styles */
+.search-bar button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Button background color */
+  border: none;
+  border-radius: 0.5rem; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover styles */
+.search-bar button:hover {
+  background-color: #0056b3; /* Darken button on hover */
+}
+
+/* Profile card styles */
+.profile-card {
+  background-color: var(--card-background); /* Use CSS variable for card background color */
+  padding: 1rem;
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Light mode styles */
+.app.light {
+  --input-background: #ffffff; /* Light mode input background color */
+  --input-border: #ccc; /* Light mode input border color */
+  --input-border-focus: #007bff; /* Light mode input focus border color */
+  --input-text: #000; /* Light mode input text color */
+}
+
+/* Dark mode styles */
+.app.dark {
+  --input-background: #1A2239; /* Dark mode input background color */
+  --input-border: #444; /* Dark mode input border color */
+  --input-border-focus: #1e90ff; /* Dark mode input focus border color */
+  --input-text: #e0e0e0; /* Dark mode input text color */
+}

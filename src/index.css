@@ -1,0 +1,23 @@
+ :root {
+    --color-white: #FFFFFF;
+    --color-white-light: #F6F8FF;
+    --color-white-lighter: #FEFEFE;
+    --color-blue: #0079FF;
+    --color-blue-light: #60ABFF;
+    --color-black: #141D2F;
+    --color-black-light: #2B3442;
+    --color-black-lighter: #1E2A47;
+    --color-grey: #4B6A9B;
+    --color-red: #F74646;
+    --body-background: var(--color-white-light);
+    --card-background: var(--color-white-lighter);
+    --text-primary: var(--color-black-light);
+    --text-secondary: var(--color-grey);
+  }
+  
+  :root[data-theme="dark"] {
+    --body-background: var(--color-black);
+    --card-background: var(--color-black-lighter);
+    --text-primary: var(--color-white);
+    --text-secondary: var(--color-white);
+  } 
